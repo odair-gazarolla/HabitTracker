@@ -1,22 +1,7 @@
+import CustomButton1 from './componets/CustomButton1';
+import customButton2 from './componets/CustomButton2';
+import customButton3 from './componets/CustomButton3';
 import './App.css'
-
-
-// Component for initial tests
-function CustomButton() {
-  return (
-    <button>Custom Button!</button>
-  )
-}
-
-const customButton2 = () => {
-    return (
-      <button>Custom Button 2!</button>
-    )
-  }
-
-const customButton3 = (
-    <button>Custom Button 3!</button>
-  );
 
 // ----- End of test Components -----
 
@@ -27,7 +12,7 @@ function App() {
       <div>
         <p>Let's start from the <h1>Stone Age</h1></p>
         <div className='buttons-box'>
-          <CustomButton />
+          <CustomButton1 />
           { customButton2() }
           { customButton3 }
         </div>
