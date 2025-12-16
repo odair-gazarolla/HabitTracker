@@ -3,8 +3,22 @@ import customButton2 from './componets/CustomButton2';
 import customButton3 from './componets/CustomButton3';
 import './App.css'
 
-// ----- End of test Components -----
+// List of users
+const users = [
+  { id: 1, nome: 'John Doe', email:''},
+  { id: 2, nome: 'Jane Smith', email: ''},
+  { id: 3, nome: 'Alice Johnson', email: ''}
+];
 
+const listUsers = users.map(user => {
+  return (
+    <ul>
+      <li key={user.id}>
+        {user.nome} - {user.email || 'Email not provided'}
+      </li>
+    </ul>
+  );
+});
 
 function App() {
   return (
@@ -15,6 +29,10 @@ function App() {
           <CustomButton1 />
           { customButton2() }
           { customButton3 }
+        </div>
+        <div>
+          <h2>User List:</h2>
+          {listUsers}
         </div>
       </div>
     </>
