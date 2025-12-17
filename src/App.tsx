@@ -1,10 +1,15 @@
 import CustomButton1 from './componets/CustomButton1';
 import customButton2 from './componets/CustomButton2';
 import customButton3 from './componets/CustomButton3';
+
+// Component import
+import userList from './componets/UserList';
+
+// Type import
 import type { User } from './types/User';
 import './App.css'
 
-// List of users
+// List of users - Mock data
 const users: User[] = [
   { id: 1, nome: 'John Doe', email:'jd@email.com'},
   { id: 2, nome: 'Jane Smith', email: ''},
@@ -13,15 +18,7 @@ const users: User[] = [
   { id: 5, nome: 'Charlie Davis after type user', email: 'cd@email.com'}
 ];
 
-const listUsers = users.map(user => {
-  return (
-    <ul>
-      <li key={user.id}>
-        {user.nome} - {user.email || 'Email not provided'}
-      </li>
-    </ul>
-  );
-});
+const listUsers = userList({users});
 
 function App() {
   return (
