@@ -3,11 +3,18 @@ import customButton2 from './componets/CustomButton2';
 import customButton3 from './componets/CustomButton3';
 import './App.css'
 
+interface User {
+  id: number;
+  nome: string;
+  email?: string;
+}
+
 // List of users
-const users = [
-  { id: 1, nome: 'John Doe', email:''},
+const users: User[] = [
+  { id: 1, nome: 'John Doe', email:'jd@email.com'},
   { id: 2, nome: 'Jane Smith', email: ''},
-  { id: 3, nome: 'Alice Johnson', email: ''}
+  { id: 3, nome: 'Alice Johnson', email: 'ajo@email.com'},
+  { id: 4, nome: 'Bob Brown' } // User without email
 ];
 
 const listUsers = users.map(user => {
